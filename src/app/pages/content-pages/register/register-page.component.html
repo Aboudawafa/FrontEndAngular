@@ -1,0 +1,103 @@
+<!--Registration Page Starts-->
+<section id="regestration">
+    <div class="container">
+        <div class="row full-height-vh">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                          
+                            <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center">
+                                <div class="card-block mx-auto">
+                               
+                                     <form> 
+                                        
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="icon-user"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" name="nom" id="nom" placeholder="First Name"  required   [(ngModel)]="etudiant.nom" >
+                                        </div>
+                                        <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="icon-user"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Last Name" [(ngModel)]="etudiant.prenom" required >
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="icon-user"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="number" class="form-control" name="cin" id="cin" placeholder="Cin" [(ngModel)]="etudiant.cin" required >
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-12 mb-2">
+                                                    <div class="position-relative has-icon-left">
+                                                        <input type="date" id="date_naissance" class="form-control" name="date_naissance" [ngModel]="etudiant.date_naissance | date:'yyyy-MM-dd'"  reqired >
+                                                        <div class="form-control-position">
+                                                            <i class="ft-message-square"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="ft-mail"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="etudiant.email" required email >
+                                            </div>
+                                            
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="ft-lock"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" [(ngModel)]="etudiant.password" required >
+                                        </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="icon-user"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" name="username" id="username" placeholder="Username" [(ngModel)]="etudiant.username" required >
+                                            </div>
+                               
+                                           
+                                        
+             
+                                        <div class="form-group col-sm-offset-1">
+                                            <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                <input type="checkbox" class="custom-control-input" checked id="terms">
+                                                <label class="custom-control-label pl-2" for="terms">I agree <a>terms and conditions</a></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group text-center">
+                                           
+                                            <button type="submit" (click)="onsubmit()" class="btn btn-warning btn-raised">Get Started</button>
+                                           <!-- <button type="button" class="btn btn-secondary btn-raised" (click)="c('Close click')">Close</button>-->
+                                           <button type="button" class="btn btn-secondary btn-raised" (click)="activeModal.close('Close click')">Close</button>
+                                            
+                                        </div>
+                                        
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Registration Page Ends-->
